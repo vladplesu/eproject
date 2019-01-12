@@ -12,5 +12,17 @@
   },
   "author": "Vlad Plesu",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/vladplesu/fooseshoes#readme"
+  "homepage": "https://bitbucket.org/vladplesu/fooseshoes#readme",
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.6"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "node-sass": "^4.11.0"
+  }
 }
