@@ -1,0 +1,16 @@
+{
+  "name": "fooseshoes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://vladplesu@bitbucket.org/vladplesu/fooseshoes.git"
+  },
+  "author": "Vlad Plesu",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/vladplesu/fooseshoes#readme"
+}
