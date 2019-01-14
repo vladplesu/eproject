@@ -1,0 +1,23 @@
+$theme-colors: (
+  'primary': #242424,
+  'light': #ebe7df,
+  'info': #57c5a0
+);
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+
+    xs: 0,
+  // Small screen / phone
+
+    sm: 320px,
+  // Medium screen / tablet
+
+    md: 768px,
+  // Large screen / desktop
+
+    lg: 960px,
+  // Extra large screen / wide desktop
+
+    xl: 1200px
+);
