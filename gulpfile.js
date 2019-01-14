@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 sass.compiler = require('node-sass');
 
 gulp.task('compileSass', function() {
-  return gulp.src('./src/scss/**/*.scss')
+  return gulp.src('src/scss/**/*.scss')
       .pipe(maps.init())
       .pipe(sass().on('error', sass.logError))
       .pipe(maps.write('./'))
@@ -17,7 +17,7 @@ gulp.task('compileSass', function() {
 });
 
 gulp.task('minifySass', function(done) {
-  gulp.src('./src/css/*.css')
+  gulp.src('src/css/*.css')
       .pipe(uglifycss({
         "uglyComments": true
       }))
