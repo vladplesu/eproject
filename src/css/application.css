@@ -1,6 +1,9 @@
 @font-face {
   font-family: 'Aller Regular';
-  src: url("src/fonts/Aller_Rg.ttf") format("truetype"); }
+  src: url("../../../public/fonts/Aller_Rg.eot");
+  src: url("../../../public/fonts/aller_rg-webfont.woff") format("woff"), url("../../../public/fonts/Aller_Rg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 
 /*!
  * Bootstrap v4.2.1 (https://getbootstrap.com/)
