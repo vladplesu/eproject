@@ -18,25 +18,27 @@
   </head>
   <body>
     <header>
-      <div class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand text-info text-uppercase" href="#">Fooseshoes</a>
-        <form class="form-inline my-2 my-lg-0">
+      <div class="navbar navbar-expand-lg navbar-dark bg-primary py-0">
+        <a class="navbar-brand text-info text-uppercase p-0" href="#"
+          >Fooseshoes</a
+        >
+        <form
+          class="form-inline my-lg-0 align-self-stretch border-left border-right border-secondary"
+        >
           <input
-            class="form-control mr-sm-2"
+            class="form-control mr-sm-2 d-none d-md-inline-block"
             type="search"
             placeholder="Search"
             aria-label="Search"
           />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            LOGIN or REGISTER
-          </button>
+          <a class="btn text-secondary">LOGIN or REGISTER</a>
         </form>
       </div>
       <!-- top-header end-->
       <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-0">
           <button
-            class="navbar-toggler"
+            class="navbar-toggler border-top-0 border-bottom-0 rounded-0 align-self-stretch mr-auto"
             type="button"
             data-toggle="collapse"
             data-target="#navbarNav"
@@ -46,6 +48,14 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+          <a href="" class="text-secondary btn border-left rounded-0 align-self-stretch">
+            <i class="far fa-star"></i>
+            <span class="badge badge-secondary">30</span>
+          </a>
+          <a href="" class="text-secondary btn border-left rounded-0 align-self-stretc border-right">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="badge badge-secondary">0</span>
+          </a>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item active">
@@ -62,14 +72,6 @@
               <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
             </ul>
           </div>
-          <a href="" class="nav-link">
-            <i class="far fa-star"></i>
-            <span class="badge badge-secondary">30</span>
-          </a>
-          <a href="" class="nav-link">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="badge badge-secondary">0</span>
-          </a>
         </nav>
       </div>
       <!-- bottom-header end-->
@@ -355,5 +357,6 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+    <script src="../src/js/app.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>
