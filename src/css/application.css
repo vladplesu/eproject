@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Aller Regular';
   src: url("../../../public/fonts/Aller_Rg.eot");
-  src: url("../../../public/fonts/aller_rg-webfont.woff") format("woff"), url("../../../public/fonts/Aller_Rg.ttf") format("truetype");
+  src: url("../../../public/fonts/Aller_Rg.eot?#iefix") format("embedded-opentype"), url("../../../public/fonts/aller_rg-webfont.woff") format("woff"), url("../../../public/fonts/Aller_Rg.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -450,13 +450,13 @@ pre {
   margin-left: auto; }
   @media (min-width: 320px) {
     .container {
-      max-width: 540px; } }
+      max-width: 300px; } }
   @media (min-width: 768px) {
     .container {
       max-width: 720px; } }
   @media (min-width: 960px) {
     .container {
-      max-width: 960px; } }
+      max-width: 920px; } }
   @media (min-width: 1200px) {
     .container {
       max-width: 1140px; } }

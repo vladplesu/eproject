@@ -22,4 +22,11 @@ $grid-breakpoints: (
     xl: 1200px
 );
 
+$container-max-widths: (
+  sm: 300px,
+  md: 720px,
+  lg: 920px,
+  xl: 1140px
+);
+
 $font-family-base: 'Aller Regular';
