@@ -19,11 +19,11 @@
   <body>
     <header>
       <div class="navbar navbar-expand-lg navbar-dark bg-primary py-0">
-        <a class="navbar-brand text-info text-uppercase p-0" href="#"
+        <a class="navbar-brand text-info text-uppercase py-1" href="/public"
           >Fooseshoes</a
         >
         <form
-          class="form-inline my-lg-0 align-self-stretch border-left border-right border-secondary"
+          class="form-inline my-lg-0 align-self-stretch"
         >
           <input
             class="form-control mr-sm-2 d-none d-md-inline-block"
@@ -31,7 +31,10 @@
             placeholder="Search"
             aria-label="Search"
           />
-          <a class="btn text-secondary">LOGIN or REGISTER</a>
+          <a class="btn text-secondary btn-sm ">
+            <span class="d-none d-sm-inline-block">LOGIN or REGISTER</span>
+            <span class="d-sm-none text-secondary"><i class="far fa-user-circle"></i></span>
+          </a>
         </form>
       </div>
       <!-- top-header end-->
@@ -48,11 +51,11 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a href="" class="text-secondary btn border-left rounded-0 align-self-stretch">
+          <a href="" class="text-secondary btn border-left rounded-0 align-self-stretch order-lg-1">
             <i class="far fa-star"></i>
             <span class="badge badge-secondary">30</span>
           </a>
-          <a href="" class="text-secondary btn border-left rounded-0 align-self-stretc border-right">
+          <a href="" class="text-secondary btn border-left rounded-0 align-self-stretc border-right order-lg-1">
             <i class="fas fa-shopping-cart"></i>
             <span class="badge badge-secondary">0</span>
           </a>
@@ -71,6 +74,9 @@
               <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
             </ul>
+            <form class="form-inline my-lg-0 mb-2">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+            </form>
           </div>
         </nav>
       </div>

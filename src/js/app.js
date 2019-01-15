@@ -1,9 +1,8 @@
-$('a i').siblings('span').hover(
+$('a').hover(
     function() {
-        console.log('test');
-        $(this).removeClass('badge-secondary').addClass('badge-info text-white');
+        $(this).find('span').removeClass('badge-secondary').addClass('badge-info text-white');
     },
     function() {
-        $(this).removeClass('badge-info text-white').addClass('badge-secondary');
+        $(this).find('span').removeClass('badge-info text-white').addClass('badge-secondary');
     }
 );
