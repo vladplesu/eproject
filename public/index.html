@@ -22,26 +22,33 @@
         <a class="navbar-brand text-info text-uppercase py-1" href="/public"
           >Fooseshoes</a
         >
-        <form
-          class="form-inline my-lg-0 align-self-stretch"
-        >
+        <form class="form-inline my-lg-0 align-self-stretch">
           <input
             class="form-control mr-sm-2 d-none d-md-inline-block"
             type="search"
             placeholder="Search"
             aria-label="Search"
           />
-          <a class="btn text-secondary btn-sm ">
-            <span class="d-none d-sm-inline-block">LOGIN or REGISTER</span>
-            <span class="d-sm-none text-secondary"><i class="far fa-user-circle"></i></span>
-          </a>
+          <button
+            type="button"
+            class="btn text-secondary btn-sm align-self-stretch rounded-0 border-secondary border-top-0 border-bottom-0"
+            data-toggle="modal"
+            data-target="#login-register"
+          >
+            <span class="d-none d-sm-inline-block small"
+              >LOGIN or REGISTER</span
+            >
+            <!-- <span class="d-sm-none text-secondary"
+              ><i class="far fa-user-circle"></i
+            ></span> -->
+          </button>
         </form>
       </div>
       <!-- top-header end-->
       <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-white py-0">
           <button
-            class="navbar-toggler border-top-0 border-bottom-0 rounded-0 align-self-stretch mr-auto"
+            class="navbar-toggler border-top-0 border-bottom-0 rounded-0 align-self-stretch mr-auto py-3 px-4"
             type="button"
             data-toggle="collapse"
             data-target="#navbarNav"
@@ -51,13 +58,25 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a href="" class="text-secondary btn border-left rounded-0 align-self-stretch order-lg-1">
+          <button
+            type="button"
+            class="text-secondary btn border-left rounded-0 align-self-stretch order-lg-1 d-flex align-items-center px-4"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+          <a
+            href=""
+            class="text-secondary btn border-left rounded-0 align-self-stretch order-lg-1 d-flex align-items-center"
+          >
             <i class="far fa-star"></i>
-            <span class="badge badge-secondary">30</span>
+            <span class="badge badge-secondary ml-2">30</span>
           </a>
-          <a href="" class="text-secondary btn border-left rounded-0 align-self-stretc border-right order-lg-1">
+          <a
+            href=""
+            class="text-secondary btn border-left rounded-0 align-self-stretch border-right order-lg-1 d-flex align-items-center px-3"
+          >
             <i class="fas fa-shopping-cart"></i>
-            <span class="badge badge-secondary">0</span>
+            <span class="badge badge-secondary ml-2">0</span>
           </a>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
@@ -75,7 +94,12 @@
               <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
             </ul>
             <form class="form-inline my-lg-0 mb-2">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
             </form>
           </div>
         </nav>
@@ -346,6 +370,58 @@
       </div>
       <!-- end bottom-footer-->
     </footer>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="login-register"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="formLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="formLabel">FooseShoes</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+              />
+              <small id="emailHelp" class="form-text text-muted"
+                >We'll never share your email with anyone else.</small
+              >
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Password"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -363,6 +439,6 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
-    <script src="../src/js/app.js" type="text/javascript" charset="utf-8"></script>
+    <!-- <script src="../src/js/app.js" type="text/javascript" charset="utf-8"></script> -->
   </body>
 </html>
