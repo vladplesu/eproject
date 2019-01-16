@@ -5,6 +5,10 @@
   font-weight: normal;
   font-style: normal; }
 
+#price {
+  bottom: 0px;
+  left: 12px; }
+
 /*!
  * Bootstrap v4.2.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -450,7 +454,7 @@ pre {
   margin-left: auto; }
   @media (min-width: 320px) {
     .container {
-      max-width: 300px; } }
+      max-width: 719px; } }
   @media (min-width: 768px) {
     .container {
       max-width: 720px; } }
