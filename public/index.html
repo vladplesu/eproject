@@ -450,7 +450,7 @@
     </main>
     <footer class="bg-dark text-white">
       <div class="container">
-        <div class="row">
+        <div class="row d-md-flex d-none row">
           <div class="col">
             <h4>Text Widget</h4>
             <p>
@@ -496,39 +496,38 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm">
+        <div class="row pt-4 pb-5 border-top border-primary">
+          <div class="col-md mb-3">
             <div class="input-group">
-              <div class="input-group-prepend">
-                <div class="input-group-text" id="btnGroupAddon">@</div>
-              </div>
               <input
-                type="text"
-                class="form-control"
-                placeholder="Input group example"
-                aria-label="Input group example"
-                aria-describedby="btnGroupAddon"
+              id="newsletter"
+              type="text"
+              class="form-control text-white"
+              placeholder="Enter email for newsletter"
+              aria-label="Enter email for newsletter"
+              aria-describedby="btnGroupAddon"
               />
+              <button type="submit" class="btn btn-secondary text-primary font-weight-bold border-0 rounded-0">></button>
             </div>
           </div>
-          <div class="col-sm">
-            <a href="#" class="btn"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="btn"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="btn"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="btn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="btn"><i class="fab fa-flickr"></i></a>
+          <div class="col-md">
+            <a href="#" class="btn text-secondary"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="btn text-secondary"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="btn text-secondary"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="btn text-secondary"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="btn text-secondary"><i class="fab fa-flickr"></i></a>
           </div>
         </div>
       </div>
       <!-- end top-footer-->
       <div
-        class="container-fluid d-flex justify-content-between align-items-center bg-light text-dark"
+        class="container bg-secondary text-primary py-3"
       >
         <div>
-          <p>Copyright&copy; Fooseshoes 2019.</p>
+          <p class="mb-0">Copyright&copy; Fooseshoes 2019.</p>
           <p>Designed by EnzoLiVolti.</p>
         </div>
-        <p>
+        <p class="mb-0">
           <a href="#">Home</a> / <a href="#">Support</a> /
           <a href="#">Terms and Conditions</a> / <a href="#">Faqs</a> /
           <a href="#">Contact us</a>
