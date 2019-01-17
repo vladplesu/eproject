@@ -1,1 +1,17 @@
 // Icon Styles
+
+#price {
+  bottom: 0px;
+  left: 12px;
+}
+
+#on-sale,
+#out-of-stock {
+  top: 0px;
+  right: 12px;
+}
+
+#out-of-stock {
+  background: #f27e4b;
+  width: 68px;
+}
