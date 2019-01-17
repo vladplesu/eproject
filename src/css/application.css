@@ -5,6 +5,10 @@
   font-weight: normal;
   font-style: normal; }
 
+#newsletter {
+  background: #2e2e2e;
+  border: none; }
+
 #price {
   bottom: 0px;
   left: 12px; }
