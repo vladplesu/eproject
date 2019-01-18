@@ -1,3 +1,6 @@
+const $searchResults = $('#search-sm');
+const $searchField = $('input[type="search"]');
+
 $('a').hover(
     function() {
         $(this).find('span').removeClass('badge-secondary').addClass('badge-info text-white');
@@ -9,10 +12,24 @@ $('a').hover(
 
 $('.card').hover(
     function() {
-        console.log('test');
         $(this).children('.card-body #productBtns').show();
     },
     function() {
-        console.log('end');
     }
 );
+
+// hide search suggestions
+$searchResults.hide();
+$searchField.focusout(function() {
+    $searchResults.slideUp('slow');
+})
+// show search suggestio on click
+$searchField.on('click', function() {
+    $searchResults.slideDown('slow');
+});
+// get value of searchResults into searchField
+$($searchResults).find('a').click(function(e) {
+    $searchField.val(e.target.textContent);
+})
+
+

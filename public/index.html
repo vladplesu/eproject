@@ -19,8 +19,7 @@
   <body>
     <header>
       <div class="navbar navbar-expand-lg navbar-dark bg-primary py-0">
-        <a class="navbar-brand text-info text-uppercase py-1" href="/public"
-          >Fooseshoes</a
+        <a href="/public" class="navbar-brand text-info text-uppercase py-1">Fooseshoes</a
         >
         <form class="form-inline my-lg-0 align-self-stretch">
           <input
@@ -67,14 +66,14 @@
             <i class="fas fa-search"></i>
           </button>
           <a
-            href=""
+            href="#"
             class="text-secondary btn border-left rounded-0 align-self-stretch order-lg-1 d-flex align-items-center"
           >
             <i class="far fa-star"></i>
             <span class="badge badge-secondary ml-2">30</span>
           </a>
           <a
-            href=""
+            href="#"
             class="text-secondary btn border-left rounded-0 align-self-stretch border-right order-lg-1 d-flex align-items-center px-3"
           >
             <i class="fas fa-shopping-cart"></i>
@@ -95,14 +94,6 @@
               <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
             </ul>
-            <form class="form-inline my-lg-0 mb-2">
-              <input
-                class="form-control mr-sm-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-            </form>
           </div>
         </nav>
       </div>
@@ -616,12 +607,14 @@
               >
                 <span aria-hidden="true">&times;</span>
               </button>
-              <input class="form-control mr-sm-2 mt-2 rounded-0 border-secondary" type="search" placeholder="Search" aria-label="Search">
-              <ul class="list-group mb-2 border-left border-right border-bottom border-secondary">
-                <a href="" class="list-group-item list-group-item-action border-0">Women Shoes</a>
-                <a href="" class="list-group-item list-group-item-action border-0">Men Shoes</a>
-                <a href="" class="list-group-item list-group-item-action border-0">Kids Shoes</a>
-              </ul>
+              <div class="form-group mb-2">
+                <input class="form-control mr-sm-2 mt-2 rounded-0 border-secondary" type="search" placeholder="Search" aria-label="Search">
+                <div id="search-sm" class="list-group border-left border-right border-bottom border-secondary">
+                  <a href="#" class="list-group-item list-group-item-action border-0">Women Shoes</a>
+                  <a href="#" class="list-group-item list-group-item-action border-0">Men Shoes</a>
+                  <a href="#" class="list-group-item list-group-item-action border-0">Kids Shoes</a>
+                </div>
+              </div>
               <button type="submit" class="btn btn-primary rounded-0">Search</button>
             </form>
           </div>
@@ -634,10 +627,10 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
       integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
