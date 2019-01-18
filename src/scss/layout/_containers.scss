@@ -1,1 +1,10 @@
 // Containers Styles
+
+.jumbotron {
+  background: url(../../../public/img/carousel/background_lg.jpg) repeat-x;
+  background-size: contain;
+}
+
+.carousel-indicators li {
+  width: 180px !important;
+}
