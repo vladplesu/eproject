@@ -13,6 +13,16 @@
   height: 461px;
 }
 
+@for $i from 2 through length($carousel-bg-img) + 1 {
+  $img-path: nth($carousel-bg-img, $i - 1);
+  .carousel-inner > div:nth-child(#{$i}) {
+    @include media-breakpoint-down(sm) {
+      background: url(../../../public/img/carousel/#{$img-path}_shoes.jpg);
+      background-size: cover;
+    }
+  }
+}
+
 .carousel-indicators li {
   width: 180px;
   opacity: 0;
