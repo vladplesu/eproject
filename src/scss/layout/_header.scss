@@ -5,3 +5,13 @@
   left: -1px;
   z-index: 9999;
 }
+
+.nav-item {
+  @include media-breakpoint-up(md) {
+    border-left: 1px solid map-get($map: $theme-colors, $key: 'nav-borders');
+
+    &:last-child {
+      border-right: 1px solid map-get($map: $theme-colors, $key: 'nav-borders');
+    }
+  }
+}

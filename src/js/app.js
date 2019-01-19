@@ -3,7 +3,7 @@ const $searchResultsLarge = $('#search-md');
 const $searchFieldSmall = $('#search-input-sm');
 const $searchFieldLarge = $('#search-input-md');
 
-$('a').hover(
+$('.navbar a').hover(
     function() {
         $(this).find('span').removeClass('badge-secondary').addClass('badge-info text-white');
     },
