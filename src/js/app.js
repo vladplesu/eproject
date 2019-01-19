@@ -1,5 +1,7 @@
-const $searchResults = $('#search-sm');
-const $searchField = $('input[type="search"]');
+const $searchResultsSmall = $('#search-sm');
+const $searchResultsLarge = $('#search-md');
+const $searchFieldSmall = $('#search-input-sm');
+const $searchFieldLarge = $('#search-input-md');
 
 $('a').hover(
     function() {
@@ -19,15 +21,25 @@ $('.card').hover(
 );
 
 // hide search suggestions
-$searchResults.hide();
-$searchField.focusout(function() {
-    $searchResults.slideUp('slow');
+$searchResultsSmall.hide();
+$searchResultsLarge.hide();
+$searchFieldSmall.focusout(function() {
+    $searchResultsSmall.slideUp('slow');
+})
+$searchFieldLarge.focusout(function() {
+    $searchResultsLarge.slideUp('slow');
 })
 // show search suggestio on click
-$searchField.on('click', function() {
-    $searchResults.slideDown('slow');
+$searchFieldSmall.on('click', function() {
+    $searchResultsSmall.slideDown('slow');
+});
+$searchFieldLarge.on('click', function() {
+    $searchResultsLarge.slideDown('slow');
 });
 // get value of searchResults into searchField
-$($searchResults).find('a').click(function(e) {
-    $searchField.val(e.target.textContent);
-})
+$($searchResultsSmall).find('a').click(function(e) {
+    $searchFieldSmall.val(e.target.textContent);
+});
+$($searchResultsLarge).find('a').click(function(e) {
+    $searchFieldLarge.val(e.target.textContent);
+});

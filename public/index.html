@@ -19,15 +19,23 @@
   <body>
     <header>
       <div class="navbar navbar-expand-lg navbar-dark bg-primary py-0">
-        <a href="/public" class="navbar-brand text-info text-uppercase py-1">Fooseshoes</a
+        <a href="/public" class="navbar-brand text-info text-uppercase py-1 mr-auto">Fooseshoes</a
         >
         <form class="form-inline my-lg-0 align-self-stretch">
-          <input
-            class="form-control mr-sm-2 d-none d-md-inline-block"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
+          <div class="form-group align-self-stretch border-left border-secondary position-relative">
+            <input
+              id="search-input-md"
+              class="bg-primary border-0 d-md-inline-block d-none form-control mr-sm-2 rounded-0 text-secondary"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <div id="search-md" class="w-100 list-group border-left border-right border-bottom border-secondary position-absolute rounded-0">
+              <a href="#" class="list-group-item list-group-item-action border-0 bg-secondary text-light rounded-0">Women Shoes</a>
+              <a href="#" class="list-group-item list-group-item-action border-0 bg-secondary text-light rounded-0">Men Shoes</a>
+              <a href="#" class="list-group-item list-group-item-action border-0 bg-secondary text-light rounded-0">Kids Shoes</a>
+            </div>
+          </div>
           <button
             type="button"
             class="btn text-secondary btn-sm align-self-stretch rounded-0 border-secondary border-top-0 border-bottom-0"
@@ -59,7 +67,7 @@
           </button>
           <button
             type="button"
-            class="text-secondary btn border-left rounded-0 align-self-stretch order-lg-1 d-flex align-items-center px-4"
+            class="text-secondary btn border-left rounded-0 align-self-stretch order-lg-1 d-flex align-items-center px-4 d-md-none"
             data-toggle="modal"
             data-target="#search"
           >
@@ -670,7 +678,7 @@
                 <span aria-hidden="true">&times;</span>
               </button>
               <div class="form-group mb-2">
-                <input class="form-control mr-sm-2 mt-2 rounded-0 border-secondary" type="search" placeholder="Search" aria-label="Search">
+                <input id="search-input-sm" class="form-control mr-sm-2 mt-2 rounded-0 border-secondary" type="search" placeholder="Search" aria-label="Search">
                 <div id="search-sm" class="list-group border-left border-right border-bottom border-secondary">
                   <a href="#" class="list-group-item list-group-item-action border-0">Women Shoes</a>
                   <a href="#" class="list-group-item list-group-item-action border-0">Men Shoes</a>

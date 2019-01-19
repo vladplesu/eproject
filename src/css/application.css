@@ -6945,6 +6945,11 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+#search-md {
+  top: 44px;
+  left: -1px;
+  z-index: 9999; }
+
 .jumbotron {
   background: url(../../../public/img/carousel/background.jpg) repeat-x;
   background-size: contain; }
