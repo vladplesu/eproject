@@ -1,10 +1,24 @@
 // Containers Styles
 
 .jumbotron {
-  background: url(../../../public/img/carousel/background_lg.jpg) repeat-x;
+  background: url(../../../public/img/carousel/background.jpg) repeat-x;
   background-size: contain;
 }
 
+.carousel {
+  max-height: 551px;
+}
+
+.carousel-inner {
+  height: 461px;
+}
+
+.carousel-item {
+  background: url(../../../public/img/carousel/pink_shoes_top_05.jpg);
+  background-size: cover;
+}
+
 .carousel-indicators li {
-  width: 180px !important;
+  width: 180px;
+  opacity: 0;
 }
