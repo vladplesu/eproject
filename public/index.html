@@ -511,11 +511,11 @@
         </div>
       </div>
     </main>
-    <footer class="bg-dark text-white">
+    <footer class="bg-primary text-silver-chalice">
       <div class="container">
-        <div class="row d-md-flex d-none row">
-          <div class="col">
-            <h4>Text Widget</h4>
+        <div class="row d-md-flex d-none row pt-5 px-4">
+          <div class="col-4 pr-4 text-justify">
+            <h4 class="boulder pb-3">Text Widget</h4>
             <p>
               Magna eget est lorem ipsum dolor sit amet consectetur. Turpis
               massa sed elementum tempus egestas sed sed risus. Aliquam
@@ -525,46 +525,57 @@
               nibh sit amet commodo nulla facilisi nullam vehicula ipsum.
             </p>
           </div>
-          <div class="col">
-            <h4>Twitter Widget</h4>
-            <div class="row">
-              <p>
-                <a href="">@ericafuster </a> Why thank you. Your work looks
-                awsome by the way! <a href="">@treemelody</a>
+          <div class="col-4 pl-3 pr-4">
+            <h4 class="boulder pb-3">Twitter Widget</h4>
+            <div class="row pl-3 pr-4 mb-2">
+              <p class="mb-0">
+                <a href="#" class="text-info">@ericafuster </a> Why thank you. Your work looks
+                awsome by the way! <a href="#" class="text-info">@treemelody</a>
               </p>
-              <span>19 days ago</span>
+              <span><small><em>19 days ago</em></small></span>
             </div>
-            <div class="row">
-              <p>
-                <a href="">@roymarvelous </a> You can seek a refund through TF
+            <div class="row pl-3 pr-4 mb-2">
+              <p class="mb-0">
+                <a href="#" class="text-info">@roymarvelous </a> You can seek a refund through TF
                 if it is not as advertised - but it is :)
               </p>
-              <span>21 days ago</span>
+              <span><small><em>21 days ago</em></small></span>
             </div>
           </div>
-          <div class="col">
-            <h4>Flicker Widget</h4>
-            <div class="row">
-              <img src="./img/flicker/flicker_35.jpg" alt="man tasting whine" />
-              <img src="./img/flicker/flicker_37.jpg" alt="house" />
-              <img
-                src="./img/flicker/flicker_39.jpg"
-                alt="man looking through a spyglas"
-              />
-            </div>
-            <div class="row">
-              <img src="./img/flicker/flicker_44.jpg" alt="weird robot" />
-              <img src="./img/flicker/flicker_45.jpg" alt="funny robot" />
-              <img src="./img/flicker/flicker_46.jpg" alt="snail" />
+          <div class="col-4 pl-3">
+            <h4 class="boulder pb-3">Flicker Widget</h4>
+            <div class="d-flex flex-wrap justify-content-around">
+              <div class="d-flex justify-content-between pb-2 flex-md-column flex-lg-row flex-lg-fill">
+                <img
+                  src="./img/flicker/flicker_35.jpg"
+                  alt="man tasting whine"
+                  class="pb-2"
+                />
+                <img
+                  src="./img/flicker/flicker_37.jpg"
+                  alt="house"
+                  class="pb-2"
+                />
+                <img
+                  src="./img/flicker/flicker_39.jpg"
+                  alt="man looking through a spyglas"
+                  class="pb-2"
+                />
+              </div>
+              <div class="d-flex justify-content-between pb-2 flex-md-column flex-lg-row flex-lg-fill">
+                <img src="./img/flicker/flicker_44.jpg" alt="weird robot" class="pb-2" />
+                <img src="./img/flicker/flicker_45.jpg" alt="funny robot" class="pb-2" />
+                <img src="./img/flicker/flicker_46.jpg" alt="snail" class="pb-2" />
+              </div>
             </div>
           </div>
         </div>
-        <div class="row pt-4 pb-5 border-top border-primary">
-          <div class="col-md mb-3">
-            <div class="input-group">
+        <div class="row pt-4 pb-5 px-4">
+          <div class="col-md mb-3 mr-auto">
+            <div class="input-group was-validated">
               <input
               id="newsletter"
-              type="text"
+              type="email"
               class="form-control text-white"
               placeholder="Enter email for newsletter"
               aria-label="Enter email for newsletter"
@@ -573,7 +584,7 @@
               <button type="submit" class="btn btn-secondary text-primary font-weight-bold border-0 rounded-0">></button>
             </div>
           </div>
-          <div class="col-md">
+          <div class="col-md text-md-right">
             <a href="#" class="btn text-secondary"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="btn text-secondary"><i class="fab fa-twitter"></i></a>
             <a href="#" class="btn text-secondary"><i class="fab fa-instagram"></i></a>
@@ -584,17 +595,19 @@
       </div>
       <!-- end top-footer-->
       <div
-        class="container bg-secondary text-primary py-3"
+        class="bg-bottom-footer text-footer-text-bottom py-4"
       >
-        <div>
-          <p class="mb-0">Copyright&copy; Fooseshoes 2019.</p>
-          <p>Designed by EnzoLiVolti.</p>
+        <div class="container d-md-flex align-items-center">
+          <div class="mr-md-auto">
+            <p class="mb-0">Copyright&copy; Fooseshoes 2019.</p>
+            <p class="mb-md-0">Designed by EnzoLiVolti.</p>
+          </div>
+          <p class="mb-0">
+            <a href="#" class="text-footer-text-bottom">Home</a> / <a href="#" class="text-footer-text-bottom">Support</a> /
+            <a href="#" class="text-footer-text-bottom">Terms and Conditions</a> / <a href="#" class="text-footer-text-bottom">Faqs</a> /
+            <a href="#" class="text-footer-text-bottom">Contact us</a>
+          </p>
         </div>
-        <p class="mb-0">
-          <a href="#">Home</a> / <a href="#">Support</a> /
-          <a href="#">Terms and Conditions</a> / <a href="#">Faqs</a> /
-          <a href="#">Contact us</a>
-        </p>
       </div>
       <!-- end bottom-footer-->
     </footer>
