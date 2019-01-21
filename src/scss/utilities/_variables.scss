@@ -8,7 +8,8 @@ $theme-colors: (
   'footer-text-bottom': #979797,
   'cod-gray': #1c1c1c,
   'silver-chalice': #a4a4a4,
-  'boulder': #7d7d7d
+  'boulder': #7d7d7d,
+  'nomad': #bcb5a7
 );
 
 $grid-breakpoints: (
@@ -31,8 +32,8 @@ $grid-breakpoints: (
 
 $container-max-widths: (
   sm: 719px,
-  md: 720px,
-  lg: 920px,
+  md: 768px,
+  lg: 960px,
   xl: 1140px
 );
 
