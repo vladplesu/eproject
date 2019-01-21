@@ -7721,10 +7721,7 @@ a.text-nomad:hover, a.text-nomad:focus {
   padding-left: 10px;
   padding-right: 10px; }
 
-.carousel {
-  max-height: 551px; }
-
-.carousel-inner {
+.carousel-item {
   height: 461px; }
 
 @media (max-width: 767.98px) {
