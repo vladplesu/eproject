@@ -1,0 +1,32 @@
+[
+  {
+    "month": "jan",
+    "day": "05",
+    "newsTitle": "Nice & Clean. The best for your blog!",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "month": "jan",
+    "day": "07",
+    "newsTitle": "What an Ecommerce theme!",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "month": "jan",
+    "day": "15",
+    "newsTitle": "What will you wear this year?",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "month": "jan",
+    "day": "22",
+    "newsTitle": "Colors. Find out which one fits you best!",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "month": "jan",
+    "day": "31",
+    "newsTitle": "This is it. Choose now!",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  }
+]

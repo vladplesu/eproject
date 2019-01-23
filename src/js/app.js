@@ -85,3 +85,12 @@ $searchFieldSmall.keyup(function () {
         });
     });
 });
+
+// update blog news
+setInterval(updateNews, 5000);
+
+function updateNews() {
+    $.getJSON('../../public/news.json', function(data) {
+
+    })
+}
