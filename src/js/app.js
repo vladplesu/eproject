@@ -3,6 +3,8 @@ const $searchResultsLarge = $('#search-md');
 const $searchFieldSmall = $('#search-input-sm');
 const $searchFieldLarge = $('#search-input-md');
 const $carouselActions = $('[id^="carousel-actions"]');
+const $productActions = $('[id^="product-actions"]');
+const $productCards = $('.card');
 
 // Add hover effect for cart and wishlist buttons
 $('.navbar a').hover(
@@ -26,13 +28,27 @@ $carouselActions.find('a').hover(
 );
 
 // Add hover effect for product action buttons
-$('.card').hover(
+$productActions.find('a').hover(
     function() {
-        $(this).children('.card-body #productBtns').show();
+        $(this).removeClass('text-secondary').addClass('text-info');
     },
     function() {
+        $(this).removeClass('text-info').addClass('text-secondary');
     }
 );
+
+// Add sliding effect for product buttons on card hover
+$productActions.hide();
+$productCards.hover(
+    function() {
+        $(this).find('[id^="product-actions"]').prev().hide('slow');
+        $(this).find('[id^="product-actions"]').show('slow');
+    },
+    function() {
+        $(this).find('[id^="product-actions"]').prev().show('slow');
+        $(this).find('[id^="product-actions"]').hide('slow');
+    }
+)
 
 // get search result from json file on keyup event for medium and large devices
 $searchFieldLarge.keyup(function () {
