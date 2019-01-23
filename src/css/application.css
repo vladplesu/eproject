@@ -7721,27 +7721,44 @@ a.text-nomad:hover, a.text-nomad:focus {
   padding-left: 10px;
   padding-right: 10px; }
 
+@media (min-width: 768px) {
+  .carousel-inner {
+    height: 551px; } }
+
 .carousel-item {
   height: 461px; }
 
 @media (max-width: 767.98px) {
-  .carousel-inner > div:nth-child(2) {
+  .carousel-inner > .container > div:nth-child(1) {
     background: url(../../../public/img/carousel/pink_shoes.jpg);
     background-size: cover; } }
 
 @media (max-width: 767.98px) {
-  .carousel-inner > div:nth-child(3) {
-    background: url(../../../public/img/carousel/white_shoes.jpg);
+  .carousel-inner > .container > div:nth-child(2) {
+    background: url(../../../public/img/carousel/anna_field_le.jpg);
     background-size: cover; } }
 
 @media (max-width: 767.98px) {
-  .carousel-inner > div:nth-child(4) {
-    background: url(../../../public/img/carousel/kids_shoes.jpg);
+  .carousel-inner > .container > div:nth-child(3) {
+    background: url(../../../public/img/carousel/prada_summer.jpg);
     background-size: cover; } }
 
 .carousel-indicators li {
   width: 180px;
-  opacity: 0; }
+  opacity: 0;
+  height: 6px;
+  margin-top: 6px;
+  margin-bottom: 6px; }
+  @media (min-width: 768px) {
+    .carousel-indicators li {
+      text-indent: 0; } }
+
+.carousel-indicators .container {
+  height: 551px; }
+
+@media (min-width: 768px) {
+  .carousel-indicators {
+    height: 90px; } }
 
 .list-inline-item > p {
   left: 0;

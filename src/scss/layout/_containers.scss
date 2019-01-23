@@ -10,31 +10,49 @@
   padding-right: 10px;
 }
 
-// .carousel {
-//   max-height: 551px;
-// }
-
-// .carousel-inner {
-//   height: 461px;
-// }
+.carousel-inner {
+  @include media-breakpoint-up(md) {
+    height: 551px;
+  }
+}
 
 .carousel-item {
   height: 461px;
 }
 
-@for $i from 2 through length($carousel-bg-img) + 1 {
-  $img-path: nth($carousel-bg-img, $i - 1);
-  .carousel-inner > div:nth-child(#{$i}) {
+@for $i from 1 through length($carousel-bg-img) {
+  $img-path: nth($carousel-bg-img, $i);
+  .carousel-inner > .container > div:nth-child(#{$i}) {
     @include media-breakpoint-down(sm) {
-      background: url(../../../public/img/carousel/#{$img-path}_shoes.jpg);
+      background: url(../../../public/img/carousel/#{$img-path}.jpg);
       background-size: cover;
     }
   }
 }
 
-.carousel-indicators li {
-  width: 180px;
-  opacity: 0;
+.carousel-indicators {
+  & li {
+    width: 180px;
+    opacity: 0;
+    height: 6px;
+    // border-top-width: 2px;
+    // border-bottom-width: 2px;
+    // border-color: black;
+    margin-top: 6px;
+    margin-bottom: 6px;
+
+    @include media-breakpoint-up(md) {
+      text-indent: 0;
+    }
+  }
+
+  .container {
+    height: 551px;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 90px;
+  }
 }
 
 .list-inline-item > p {
