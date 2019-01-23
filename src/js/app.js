@@ -2,7 +2,9 @@ const $searchResultsSmall = $('#search-sm');
 const $searchResultsLarge = $('#search-md');
 const $searchFieldSmall = $('#search-input-sm');
 const $searchFieldLarge = $('#search-input-md');
+const $carouselActions = $('[id^="carousel-actions"]');
 
+// Add hover effect for cart and wishlist buttons
 $('.navbar a').hover(
     function() {
         $(this).find('span').removeClass('badge-secondary').addClass('badge-info text-white');
@@ -12,6 +14,18 @@ $('.navbar a').hover(
     }
 );
 
+// Add hover effect for carousel action buttons
+$carouselActions.find('a').hover(
+    function() {
+        console.log("test");
+        $(this).removeClass('text-secondary').addClass('text-info');
+    },
+    function() {
+        $(this).removeClass('text-info').addClass('text-secondary');
+    }
+);
+
+// Add hover effect for product action buttons
 $('.card').hover(
     function() {
         $(this).children('.card-body #productBtns').show();
