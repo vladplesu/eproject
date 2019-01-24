@@ -1,10 +1,11 @@
-const $searchResultsSmall = $('#search-sm');
-const $searchResultsLarge = $('#search-md');
-const $searchFieldSmall = $('#search-input-sm');
-const $searchFieldLarge = $('#search-input-md');
-const $carouselActions = $('[id^="carousel-actions"]');
-const $productActions = $('[id^="product-actions"]');
-const $productCards = $('.card');
+const $searchResultsSmall = $('#search-sm'),
+      $searchResultsLarge = $('#search-md'),
+      $searchFieldSmall   = $('#search-input-sm'),
+      $searchFieldLarge   = $('#search-input-md'),
+      $carouselActions    = $('[id^="carousel-actions"]'),
+      $productActions     = $('[id^="product-actions"]'),
+      $productCards       = $('.card'),
+      $blogNews           = $('[id^="blog-news"]');
 
 // Add hover effect for cart and wishlist buttons
 $('.navbar a').hover(
@@ -91,6 +92,32 @@ setInterval(updateNews, 5000);
 
 function updateNews() {
     $.getJSON('../../public/news.json', function(data) {
-
+        let first = getRandom(5);
+        let second = first < data.length - 1 ? first + 1 : 0;
+        console.log($blogNews);
+        $($blogNews[0]).html('').append(
+            '<div class="bg-info text-white py-2 px-3 text-center">\
+                <p class="h11 font-weight-bold m-0 text-uppercase">' + data[first].month + '</p>\
+                <p class="h9 font-weight-bold m-0">' + data[first].day + '</p>\
+            </div>\
+            <div class="col">\
+                <h4 class="h8 font-weight-bold mb-0">' + data[first].newsTitle + '</h4>\
+                <p class="h10">' + data[first].content + '</p>\
+            </div>'
+        );
+        $($blogNews[1]).html('').append(
+            '<div class="bg-info text-white py-2 px-3 text-center">\
+                <p class="h11 font-weight-bold m-0 text-uppercase">' + data[second].month + '</p>\
+                <p class="h9 font-weight-bold m-0">' + data[second].day + '</p>\
+            </div>\
+            <div class="col">\
+                <h4 class="h8 font-weight-bold mb-0">' + data[second].newsTitle + '</h4>\
+                <p class="h10">' + data[second].content + '</p>\
+            </div>'
+        );
     })
+}
+
+function getRandom(max) {
+    return Math.floor(Math.random() * Math.floor(max));
 }
