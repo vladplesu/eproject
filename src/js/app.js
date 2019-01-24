@@ -6,7 +6,8 @@ const $searchResultsSmall = $('#search-sm'),
       $productActions     = $('[id^="product-actions"]'),
       $productCards       = $('.card'),
       $blogNews           = $('[id^="blog-news"]'),
-      $twitterPosts       = $('[id^="post"]');
+      $twitterPosts       = $('[id^="post"]'),
+      $flickers           = $('#flicker-widget').children('div').children('a');;
 
 // Add hover effect for cart and wishlist buttons
 $('.navbar a').hover(
@@ -141,6 +142,16 @@ function updatePosts() {
         );
     });
 }
+
+// open flicker images
+$flickers.on('click', function(e) {
+    e.preventDefault();
+    let src = $(this).children('img').attr('src');
+    let alt = $(this).children('img').attr('alt')
+    let img = $('#flicker').find('.modal-body').children('img');
+    img.attr('src', src).attr('alt', alt);
+    $('#flicker').modal('show');
+});
 
 function getRandom(max) {
     return Math.floor(Math.random() * Math.floor(max));
