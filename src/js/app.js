@@ -5,7 +5,8 @@ const $searchResultsSmall = $('#search-sm'),
       $carouselActions    = $('[id^="carousel-actions"]'),
       $productActions     = $('[id^="product-actions"]'),
       $productCards       = $('.card'),
-      $blogNews           = $('[id^="blog-news"]');
+      $blogNews           = $('[id^="blog-news"]'),
+      $twitterPosts       = $('[id^="post"]');
 
 // Add hover effect for cart and wishlist buttons
 $('.navbar a').hover(
@@ -88,13 +89,13 @@ $searchFieldSmall.keyup(function () {
 });
 
 // update blog news
+updateNews();
 setInterval(updateNews, 5000);
 
 function updateNews() {
     $.getJSON('../../public/news.json', function(data) {
         let first = getRandom(5);
         let second = first < data.length - 1 ? first + 1 : 0;
-        console.log($blogNews);
         $($blogNews[0]).html('').append(
             '<div class="bg-info text-white py-2 px-3 text-center">\
                 <p class="h11 font-weight-bold m-0 text-uppercase">' + data[first].month + '</p>\
@@ -115,9 +116,37 @@ function updateNews() {
                 <p class="h10">' + data[second].content + '</p>\
             </div>'
         );
-    })
+    });
+}
+
+// update twitter posts
+updatePosts();
+setInterval(updatePosts, 5000);
+
+function updatePosts() {
+    $.getJSON('../../public/posts.json', function(data) {
+        let first = getRandom(5);
+        let second = first < data.length - 1 ? first + 1 : 0;
+        $($twitterPosts[0]).html('').append(
+            '<p class="mb-0">\
+                <a href="#" class="text-info">@' + data[first].user + ' </a>' + data[first].post + '<a href="#" class="text-info">' + (data[first].shoutouts.length === 0 ? '' : ' @' + data[first].shoutouts) + '</a>\
+            </p>\
+            <span><small><em>' + getDays(data[first].date) + ' days ago</em></small></span>'
+        );
+        $($twitterPosts[1]).html('').append(
+            '<p class="mb-0">\
+                <a href="#" class="text-info">@' + data[second].user + ' </a>' + data[second].post + '<a href="#" class="text-info">' + (data[second].shoutouts.length === 0 ? '' : ' @' + data[second].shoutouts) + '</a>\
+            </p>\
+            <span><small><em>' + getDays(data[second].date) + ' days ago</em></small></span>'
+        );
+    });
 }
 
 function getRandom(max) {
     return Math.floor(Math.random() * Math.floor(max));
+}
+
+function getDays(date) {
+    let today = Date.now();
+    return Math.round((today - Date.parse(date))/(1000*60*60*24));
 }
