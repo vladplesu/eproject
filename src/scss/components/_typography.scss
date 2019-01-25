@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'Aller Regular';
-  src: url('../../../public/fonts/Aller_Rg.eot');
-  src: url('../../../public/fonts/Aller_Rg.eot?#iefix')
+  src: url('./fonts/Aller_Rg.eot');
+  src: url('./fonts/Aller_Rg.eot?#iefix')
       format('embedded-opentype'),
-    url('../../../public/fonts/aller_rg-webfont.woff') format('woff'),
-    url('../../../public/fonts/Aller_Rg.ttf') format('truetype');
+    url('./fonts/aller_rg-webfont.woff') format('woff'),
+    url('./fonts/Aller_Rg.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

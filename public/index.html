@@ -7,13 +7,15 @@
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../src/css/application.css" />
+    <link rel="stylesheet" href="application.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
     />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Fooseshoes</title>
   </head>
   <body>
@@ -572,15 +574,18 @@
           <div class="row pt-4 pb-2 pb-md-5 px-md-4">
             <div class="col-md mb-3">
               <div class="input-group was-validated">
-                <input
-                id="newsletter"
-                type="email"
-                class="form-control text-white"
-                placeholder="Enter email for newsletter"
-                aria-label="Enter email for newsletter"
-                aria-describedby="btnGroupAddon"
-                />
-                <button type="submit" class="btn btn-secondary text-primary font-weight-bold border-0 rounded-0">></button>
+                <form action="/register" method="post" class="form-group form-inline">
+                  <input
+                  id="newsletter"
+                  type="email"
+                  name="useremail"
+                  class="form-control text-white"
+                  placeholder="Enter email for newsletter"
+                  aria-label="Enter email for newsletter"
+                  aria-describedby="btnGroupAddon"
+                  />
+                  <button type="submit" class="btn btn-secondary text-primary font-weight-bold border-0 rounded-0">></button>
+                </form>
               </div>
             </div>
             <div id="social-media" class="col-md text-md-right">
