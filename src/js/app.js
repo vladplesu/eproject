@@ -30,17 +30,24 @@ setHover($productActions.find('a'));
 setHover($socialMedia);
 
 // Add sliding effect for product buttons on card hover
-$productActions.hide();
-$productCards.hover(
-    function() {
-        $(this).find('[id^="product-actions"]').prev().hide('slow');
-        $(this).find('[id^="product-actions"]').show('slow');
-    },
-    function() {
-        $(this).find('[id^="product-actions"]').prev().show('slow');
-        $(this).find('[id^="product-actions"]').hide('slow');
-    }
-)
+if ($(window).width() >= 768) {
+    $productActions.hide();
+    $productCards.hover(
+        function() {
+            $(this).find('[id^="product-actions"]')
+                .next()
+                .css('text-overflow', 'unset')
+                .animate({ width: 'toggle' }, 1500);
+            $(this).find('[id^="product-actions"]')
+                .css('text-overflow', 'unset')
+                .animate({ width: 'toggle' }, 1500);
+        },
+        function() {
+            $(this).find('[id^="product-actions"]').next().animate({width: 'toggle'}, 1500);
+            $(this).find('[id^="product-actions"]').animate({ width: 'toggle' }, 1500);
+        }
+    );
+}
 
 // get search result from json file on keyup event for medium and large devices
 setSearchItems($searchFieldLarge, $searchResultsLarge,  ' bg-secondary text-light rounded-0')
