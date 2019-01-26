@@ -21,14 +21,14 @@
   <body>
     <header class="bg-primary">
       <!-- top header begin-->
-      <div class="navbar py-0 container align-items-stretch">
+      <div class="navbar py-0 container align-items-stretch flex-nowrap">
         <a href="/public" class="navbar-brand text-info text-uppercase py-1">Fooseshoes</a
         >
         <form class="form-inline align-items-stretch">
-          <div class="form-group border-left border-secondary position-relative">
+          <div class="form-group border-left border-secondary position-relative d-none d-md-flex">
             <input
               id="search-input-md"
-              class="bg-primary border-0 d-md-inline-block d-none form-control mr-md-2 rounded-0 text-secondary"
+              class="bg-primary border-0 form-control mr-md-2 rounded-0 text-secondary"
               type="search"
               placeholder="Search"
               aria-label="Search"
@@ -42,20 +42,17 @@
             data-toggle="modal"
             data-target="#login-register"
           >
-            <span class="d-none d-sm-inline-block small"
-              >LOGIN or REGISTER</span
-            >
-            <!-- <span class="d-sm-none text-secondary"
-              ><i class="far fa-user-circle"></i
-            ></span> -->
+            <span class="small">
+              LOGIN or REGISTER
+            </span>
           </button>
         </form>
       </div>
       <!-- top-header end-->
       <div class="bg-white">
-        <nav class="navbar navbar-expand-md navbar-light bg-white py-0 container">
+        <nav class="navbar navbar-expand-md navbar-light py-0 container">
           <button
-            class="navbar-toggler border-top-0 border-bottom-0 rounded-0 align-self-stretch mr-auto py-3 px-md-4"
+            class="navbar-toggler border-top-0 border-bottom-0 rounded-0 mr-auto py-3"
             type="button"
             data-toggle="collapse"
             data-target="#navbarNav"
@@ -67,7 +64,7 @@
           </button>
           <button
             type="button"
-            class="text-secondary btn border-left rounded-0 align-self-stretch order-md-1 d-flex align-items-center px-4 d-md-none"
+            class="text-secondary btn border-left rounded-0 align-self-stretch d-flex px-4 d-md-none"
             data-toggle="modal"
             data-target="#search"
           >
@@ -153,7 +150,7 @@
                     <span class="bg-info text-white font-weight-bold py-4 small px-2 d-inline-block">$145.99</span>
                     <h1 class="m-0">Pink Shoes</h1>
                     <h2>2019 Collection</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quas officia? Tempore consequuntur quia exercitationem sed earum aperiam nostrum, nisi suscipit eaque? Illo vero iusto culpa quasi. At, explicabo optio?</p>
+                    <p class="text-truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quas officia? Tempore consequuntur quia exercitationem sed earum aperiam nostrum, nisi suscipit eaque? Illo vero iusto culpa quasi. At, explicabo optio?</p>
                     <div id="carousel-actions-1" class="row mx-0">
                       <a href="#" class="btn text-secondary bg-white mr-1">
                         <i class="far fa-eye"></i>
@@ -182,7 +179,7 @@
                     <span class="bg-info text-white font-weight-bold py-4 small px-2 d-inline-block">$145.99</span>
                     <h1 class="m-0">Anna Field</h1>
                     <h2>Limited Edition</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore dolore quibusdam sit porro magnam maxime obcaecati, maiores perspiciatis molestiae voluptatem. Necessitatibus nemo adipisci magni obcaecati omnis nam pariatur id veritatis!</p>
+                    <p class="text-truncate">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore dolore quibusdam sit porro magnam maxime obcaecati, maiores perspiciatis molestiae voluptatem. Necessitatibus nemo adipisci magni obcaecati omnis nam pariatur id veritatis!</p>
                     <div id="carousel-actions-2" class="row mx-0">
                       <a href="#" class="btn text-secondary bg-white mr-1">
                         <i class="far fa-eye"></i>
@@ -211,7 +208,7 @@
                     <span class="bg-info text-white font-weight-bold py-4 small px-2 d-inline-block">$145.99</span>
                     <h1 class="m-0">Prada</h1>
                     <h2>Summer Collection</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea necessitatibus quam quis repellat commodi explicabo eaque laboriosam aperiam vitae deserunt fugit culpa, minima alias consequatur, tempora minus numquam deleniti expedita?</p>
+                    <p class="text-truncate">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea necessitatibus quam quis repellat commodi explicabo eaque laboriosam aperiam vitae deserunt fugit culpa, minima alias consequatur, tempora minus numquam deleniti expedita?</p>
                     <div id="carousel-actions-3" class="row mx-0">
                       <a href="#" class="btn text-secondary bg-white mr-1">
                         <i class="far fa-eye"></i>

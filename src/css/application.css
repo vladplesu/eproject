@@ -7721,12 +7721,14 @@ a.text-nomad:hover, a.text-nomad:focus {
   padding-left: 10px;
   padding-right: 10px; }
 
-@media (min-width: 768px) {
-  .carousel-inner {
-    height: 551px; } }
+.carousel-inner {
+  height: 461px; }
+  @media (min-width: 768px) {
+    .carousel-inner {
+      height: 551px; } }
 
 .carousel-item {
-  height: 461px; }
+  height: 423px; }
 
 @media (max-width: 767.98px) {
   .carousel-inner > .container > div:nth-child(1) {
