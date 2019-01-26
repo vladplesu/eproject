@@ -130,7 +130,7 @@ function setSearchItems($searchField, $searchResults, itemsClass = '') {
         $.getJSON('../../public/data.json', function (data) {
             $.each(data, function (key, value) {
                 if (value.result.search(expression) !== -1) {
-                    $searchResults.append('<a href="#" class="list-group-item list-group-item-action border-0' + itemsClass + '">' + value.result + '</a>');
+                    $searchResults.append('<a href="#" class="list-group-item border-0' + itemsClass + '">' + value.result + '</a>');
                     $searchResults.find('a').click(function (e) {
                         $searchField.val(e.target.textContent);
                         $searchResults.slideUp('slow');
