@@ -108,11 +108,52 @@
     <main class="bg-light">
       <div class="jumbotron p-0 rounded-0 mb-0">
         <div class="container">
-          <img src="img/banner/banner.jpg" alt="pink shoes">
-          <span class="bg-info text-white font-weight-bold py-4 small px-2 d-inline-block">$145.99</span>
-          <h1 class="m-0">Pink Shoes</h1>
-          <h2>2019 Collection</h2>
-          <p class="text-truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quas officia? Tempore consequuntur quia exercitationem sed earum aperiam nostrum, nisi suscipit eaque? Illo vero iusto culpa quasi. At, explicabo optio?</p>
+          <div class="row flex-nowrap mx-0">
+            <img class="d-none d-md-block col-md-5 pl-0" src="img/banner/banner.jpg" alt="pink shoes">
+            <div class="col-md-7 pt-4 pr-0">
+              <span class="bg-info text-white font-weight-bold py-4 small px-2 float-left mt-3 mr-3">$145.99</span>
+              <h1 class="m-0">Pink Shoes</h1>
+              <h2 class="h1">2019 Collection</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quas officia? Tempore consequuntur quia exercitationem sed earum aperiam nostrum, nisi suscipit eaque?</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-primary">
+          <div class="container d-flex flex-column align-items-baseline text-white flex-md-row justify-content-md-between align-items-md-center py-md-4">
+            <p class="ml-md-5 mb-0 pl-md-5 pl-3 pt-3 pt-md-0">Shop By</p>
+            <div class="dropdown">
+                <button type="button" class="btn text-white">Brands</button>
+                <button type="button" class="btn text-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="far fa-caret-square-down"></i>
+                </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Anna Field</a>
+                <a class="dropdown-item" href="#">Prada</a>
+                <a class="dropdown-item" href="#">Top Brand</a>
+              </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="btn text-white">Categories</button>
+                <button type="button" class="btn text-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="far fa-caret-square-down"></i>
+                </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Women Shoes</a>
+                <a class="dropdown-item" href="#">Men Shoes</a>
+                <a class="dropdown-item" href="#">Kids Shoes</a>
+              </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="btn text-white">Price</button>
+                <button type="button" class="btn text-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="far fa-caret-square-down"></i>
+                </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Price: Low to High</a>
+                <a class="dropdown-item" href="#">Price: High to Low</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- banner end-->
@@ -514,7 +555,7 @@
       </div>
       <div class="border-top border-cod-gray">
         <div class="container">
-          <div class="row pt-4 pb-2 pb-md-5 px-md-4">
+          <div class="row pt-4 pb-2 pb-md-5 px-md-4 mx-0">
             <div class="col-md mb-3">
               <div class="input-group was-validated">
                 <input
