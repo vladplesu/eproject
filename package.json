@@ -19,6 +19,8 @@
     "popper.js": "^1.14.6"
   },
   "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-jquery": "^1.0.1",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.4.0",

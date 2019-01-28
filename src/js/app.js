@@ -14,36 +14,51 @@ const $searchResultsSmall = $('#search-sm'),
 
 // Switch products layout to a list layout
 $listSwitch.on('click', function () {
-    let cardClasses = ['card-custom', 'col-md'];
-    let cardBodyClasses = [
-        'card-body-custom',
-        'pb-0',
-        'border-top',
-        'mx-0',
-        'pr-0',
-        'py-0',
-        'd-flex',
-        'flex-column',
-        'justify-content-center'];
-    let spanClasses = ['p-1', 'rounded', 'py-4', 'small', 'px-2', 'position-absolute'];
-    $productCards.toggleClass(cardClasses);
-    $productCards.children('img').toggleClass('card-img-top');
-    $productCards.children('div').toggleClass(cardBodyClasses);
-    $productCards.children('div').children('span').toggleClass(spanClasses);
-    $productActions.show();
-    // $.get('/public/products-list.html', function(data) {
-    //     console.log(data);
-    //     $('#products').not('div:first').remove();
-    //     $('#products').append(data);
-    // })
+    if (!$productCards.hasClass('card-custom')) {
+        let cardClasses = ['card-custom', 'col-md', 'mr-md-3'];
+        let cardBodyClasses = [
+            'card-body-custom',
+            'pl-3',
+            'border-top',
+            'mx-0',
+            'pr-0',
+            'py-0',
+            'd-flex',
+            'flex-column',
+            'justify-content-center'];
+        let spanClasses = ['p-1', 'rounded', 'py-4', 'px-2', 'position-absolute'];
+        $('#products').children('div').not(':first').toggleClass('flex-column');
+        $productCards.toggleClass(cardClasses);
+        $productCards.children('img').toggleClass('card-img-top');
+        $productCards.children('div').toggleClass(cardBodyClasses);
+        $productCards.children('div').children('span').toggleClass(spanClasses);
+        $productCards.off('mouseenter mouseleave');
+        $productActions.css('display', '');
+    }
 });
 
 // Switch product layout to a grid layout
 $gridSwitch.on('click', function() {
-    // $.get('/public/products-grid.html', function(data) {
-    //     console.log(data);
-    //     $('#products').html('').append(data);
-    // })
+    if ($productCards.hasClass('card-custom')) {
+        let cardClasses = ['card-custom', 'col-md', 'mr-md-3'];
+        let cardBodyClasses = [
+            'card-body-custom',
+            'pl-3',
+            'border-top',
+            'mx-0',
+            'pr-0',
+            'py-0',
+            'd-flex',
+            'flex-column',
+            'justify-content-center'];
+        let spanClasses = ['p-1', 'rounded', 'py-4', 'px-2', 'position-absolute'];
+        $('#products').children('div').not(':first').toggleClass('flex-column');
+        $productCards.toggleClass(cardClasses);
+        $productCards.children('img').toggleClass('card-img-top');
+        $productCards.children('div').toggleClass(cardBodyClasses);
+        $productCards.children('div').children('span').toggleClass(spanClasses);
+        showActionBtns();
+    }
 })
 
 // Add hover effect for cart and wishlist buttons
@@ -70,14 +85,12 @@ showActionBtns();
 function showActionBtns() {
     if ($(window).width() >= 768) {
         $productActions.hide();
-        $productCards.hover(
-            function () {
-                $(this).find('[id^="product-actions"]').show('slow');
-            },
-            function () {
+        $productCards
+            .on('mouseenter', function () {
+                $(this).find('[id^="product-actions"]').show('slow');})
+            .on('mouseleave', function() {
                 $(this).find('[id^="product-actions"]').slideUp('slow');
-            }
-        );
+            });
     }
 }
 
