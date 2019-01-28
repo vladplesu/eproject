@@ -29,3 +29,7 @@
   margin-left: 120px;
   border-left: 1px solid map-get($map: $theme-colors, $key: 'secondary');
 }
+
+.card-body {
+  padding-left: 85px !important;
+}

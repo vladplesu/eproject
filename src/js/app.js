@@ -12,28 +12,47 @@ const $searchResultsSmall = $('#search-sm'),
       $listSwitch         = $('#list'),
       $gridSwitch          = $('#grid');
 
-$listSwitch.on('click', function() {
-    $.get('/public/products-list.html', function(data) {
-        console.log(data);
-        $('#products').not('div:first').remove();
-        $('#products').append(data);
-    })
+// Switch products layout to a list layout
+$listSwitch.on('click', function () {
+    let cardClasses = ['card-custom', 'col-md'];
+    let cardBodyClasses = [
+        'card-body-custom',
+        'pb-0',
+        'border-top',
+        'mx-0',
+        'pr-0',
+        'py-0',
+        'd-flex',
+        'flex-column',
+        'justify-content-center'];
+    let spanClasses = ['p-1', 'rounded', 'py-4', 'small', 'px-2', 'position-absolute'];
+    $productCards.toggleClass(cardClasses);
+    $productCards.children('img').toggleClass('card-img-top');
+    $productCards.children('div').toggleClass(cardBodyClasses);
+    $productCards.children('div').children('span').toggleClass(spanClasses);
+    $productActions.show();
+    // $.get('/public/products-list.html', function(data) {
+    //     console.log(data);
+    //     $('#products').not('div:first').remove();
+    //     $('#products').append(data);
+    // })
 });
 
+// Switch product layout to a grid layout
 $gridSwitch.on('click', function() {
-    $.get('/public/products-grid.html', function(data) {
-        console.log(data);
-        $('#products').html('').append(data);
-    })
+    // $.get('/public/products-grid.html', function(data) {
+    //     console.log(data);
+    //     $('#products').html('').append(data);
+    // })
 })
 
 // Add hover effect for cart and wishlist buttons
 $('.navbar a').hover(
     function() {
-        $(this).find('span').removeClass('badge-secondary').addClass('badge-info text-white');
+        $(this).find('span').toggleClass(['badge-secondary', 'badge-info text-white']);
     },
     function() {
-        $(this).find('span').removeClass('badge-info text-white').addClass('badge-secondary');
+        $(this).find('span').toggleClass(['badge-info text-white', 'badge-secondary']);
     }
 );
 
@@ -47,23 +66,19 @@ setHover($productActions.find('a'));
 setHover($socialMedia);
 
 // Add sliding effect for product buttons on card hover
-if ($(window).width() >= 768) {
-    $productActions.hide();
-    $productCards.hover(
-        function() {
-            $(this).find('[id^="product-actions"]')
-                .next()
-                .css('text-overflow', 'unset')
-                .animate({ width: 'toggle' }, 1500);
-            $(this).find('[id^="product-actions"]')
-                .css('text-overflow', 'unset')
-                .animate({ width: 'toggle' }, 1500);
-        },
-        function() {
-            $(this).find('[id^="product-actions"]').next().animate({width: 'toggle'}, 1500);
-            $(this).find('[id^="product-actions"]').animate({ width: 'toggle' }, 1500);
-        }
-    );
+showActionBtns();
+function showActionBtns() {
+    if ($(window).width() >= 768) {
+        $productActions.hide();
+        $productCards.hover(
+            function () {
+                $(this).find('[id^="product-actions"]').show('slow');
+            },
+            function () {
+                $(this).find('[id^="product-actions"]').slideUp('slow');
+            }
+        );
+    }
 }
 
 // get search result from json file on keyup event for medium and large devices
@@ -138,10 +153,12 @@ function getDays(date) {
 function setHover($elem) {
     $elem.hover(
         function() {
-            $(this).removeClass('text-secondary').addClass('text-info');
+            //$(this).removeClass('text-secondary').addClass('text-info');
+            $(this).toggleClass(['text-secondary', 'text-info']);
         },
         function() {
-            $(this).removeClass('text-info').addClass('text-secondary');
+            //$(this).removeClass('text-info').addClass('text-secondary');
+            $(this).toggleClass(['text-secondary', 'text-info']);
         }
     );
 }

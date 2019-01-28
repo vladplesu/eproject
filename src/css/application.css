@@ -47,6 +47,9 @@
   margin-left: 120px;
   border-left: 1px solid #6e6e6e; }
 
+.card-body {
+  padding-left: 85px !important; }
+
 /*!
  * Bootstrap v4.2.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
