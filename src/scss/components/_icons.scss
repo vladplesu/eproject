@@ -15,3 +15,17 @@
   background: #f27e4b;
   width: 68px;
 }
+
+.card-custom {
+  img {
+    position: absolute;
+    width: 110px;
+    top: 5px;
+    left: 5px;
+  }
+}
+
+.card-body-custom {
+  margin-left: 120px;
+  border-left: 1px solid map-get($map: $theme-colors, $key: 'secondary');
+}

@@ -37,6 +37,16 @@
   background: #f27e4b;
   width: 68px; }
 
+.card-custom img {
+  position: absolute;
+  width: 110px;
+  top: 5px;
+  left: 5px; }
+
+.card-body-custom {
+  margin-left: 120px;
+  border-left: 1px solid #6e6e6e; }
+
 /*!
  * Bootstrap v4.2.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors

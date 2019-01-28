@@ -8,7 +8,24 @@ const $searchResultsSmall = $('#search-sm'),
       $blogNews           = $('[id^="blog-news"]'),
       $twitterPosts       = $('[id^="post"]'),
       $flickers           = $('#flicker-widget').children('div').children('a'),
-      $socialMedia        = $('#social-media').children('a');
+      $socialMedia        = $('#social-media').children('a'),
+      $listSwitch         = $('#list'),
+      $gridSwitch          = $('#grid');
+
+$listSwitch.on('click', function() {
+    $.get('/public/products-list.html', function(data) {
+        console.log(data);
+        $('#products').not('div:first').remove();
+        $('#products').append(data);
+    })
+});
+
+$gridSwitch.on('click', function() {
+    $.get('/public/products-grid.html', function(data) {
+        console.log(data);
+        $('#products').html('').append(data);
+    })
+})
 
 // Add hover effect for cart and wishlist buttons
 $('.navbar a').hover(
