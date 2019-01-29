@@ -28,8 +28,15 @@
 .card-body-custom {
   margin-left: 120px;
   border-left: 1px solid map-get($map: $theme-colors, $key: 'secondary');
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.25rem !important;
+  height: 90px !important;
+  @include media-breakpoint-up(md) {
+    height: initial !important;
+  }
 }
 
 .card-body {
-  padding-left: 85px !important;
+  padding-left: 85px;
+  height: 65px;
 }
