@@ -23,6 +23,7 @@ if ($(window).width() < 768) {
 $listSwitch.on('click', function () {
     if (!$productCards.hasClass('card-custom')) {
         switchLayout();
+        $('[id^="products"]').children('div:nth-child(n+2)').children('div:last-child').removeClass('mr-md-3');
         $productCards.off('mouseenter mouseleave');
         $productActions.css('display', '');
     }
@@ -31,7 +32,7 @@ $listSwitch.on('click', function () {
 // Switch product layout to a grid layout
 $gridSwitch.on('click', function() {
     if ($productCards.hasClass('card-custom')) {
-        switchLayout()
+        switchLayout();
         showActionBtns();
     }
 })
@@ -182,7 +183,7 @@ function switchLayout() {
         'flex-column',
         'justify-content-center'];
     let spanClasses = ['p-1', 'rounded', 'px-2', 'position-absolute', 'nowrap'];
-    $('#products').children('div').not(':first').toggleClass('flex-column');
+    $('[id^="products"]').children('div:nth-child(n+2)').toggleClass('flex-column');
     $productCards.toggleClass(cardClasses);
     $productCards.children('img').toggleClass('card-img-top');
     $productCards.children('div').toggleClass(cardBodyClasses);

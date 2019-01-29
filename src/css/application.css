@@ -7744,6 +7744,11 @@ a.text-nomad:hover, a.text-nomad:focus {
   padding-left: 10px;
   padding-right: 10px; }
 
+@media (max-width: 767.98px) {
+  #banner {
+    background: url(../../../public/img/banner/banner.jpg);
+    background-size: cover; } }
+
 .carousel-inner {
   height: 461px; }
   @media (min-width: 768px) {
