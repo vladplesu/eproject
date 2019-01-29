@@ -210,8 +210,12 @@ function switchLayout() {
     $productCards
         .children( "div" )
         .children( "span" )
-        .not( "#out-of-stock" )
+        .not( ".out-of-stock" )
         .toggleClass( [ ...spanClasses, "py-4" ] );
-    $( "#out-of-stock" ).toggleClass( [ ...spanClasses, "py-3" ] );
+    $productCards
+        .children( "div" )
+        .children( "span" )
+        .filter( ".out-of-stock" )
+        .toggleClass( [ ...spanClasses, "py-3" ] );
     $productCards.children( "div" ).children( "p" ).toggleClass( "d-md-block" );
 }
