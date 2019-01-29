@@ -1,0 +1,14 @@
+{
+  "extends": "jquery",
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "env": {
+    "es6": true,
+    "jquery": true
+  },
+  "plugins": ["dollar-sign"],
+  "rules": {
+    "dollar-sign/dollar-sign": [2, "ignoreProperties"]
+  }
+}
