@@ -18,7 +18,6 @@ router.get('/', function(req, res) {
 })
 
 router.get('/products', function(req,res) {
-    console.log(__dirname);
     res.sendFile(path.join(__dirname + '/../products.html'));
 })
 
@@ -29,11 +28,11 @@ router.post('/register', [body('useremail').isEmail().normalizeEmail(), sanitize
     }
 
     let user = { email: req.body.useremail };
-    fs.readFile('public/subscribers.json', function (err, data) {
+    fs.readFile('public/data/subscribers.json', function (err, data) {
         if (err && err.code === 'ENOENT') {
             let obj = [];
             obj.push(user);
-            fs.writeFileSync('public/subscribers.json', JSON.stringify(obj), error => console.error);
+            fs.writeFileSync('public/data/subscribers.json', JSON.stringify(obj), error => console.error);
         } else if (err) {
             console.error(err);
         } else {
@@ -42,7 +41,7 @@ router.post('/register', [body('useremail').isEmail().normalizeEmail(), sanitize
 
                 fileData.push(user);
 
-                fs.writeFileSync('public/subscribers.json', JSON.stringify(fileData), error => console.error);
+                fs.writeFileSync('public/data/subscribers.json', JSON.stringify(fileData), error => console.error);
             } catch (exception) {
                 console.error(exception);
             }
