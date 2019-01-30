@@ -1,17 +1,19 @@
-let express = require('express');
-let bodyParser = require('body-parser');
-let fs = require('fs');
-let path = require('path');
+'use strict';
+
+const express    = require('express'),
+      bodyParser = require('body-parser'),
+      fs         = require('fs'),
+      path       = require('path');
 
 const { body, validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');
 
-let app = express();
+const app = express();
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 
-let router = express.Router();
+const router = express.Router();
 
 router.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/../index.html'));
@@ -27,10 +29,10 @@ router.post('/register', [body('useremail').isEmail().normalizeEmail(), sanitize
         return res.status(422).json({ errors: errors.array() });
     }
 
-    let user = { email: req.body.useremail };
+    const user = { email: req.body.useremail };
     fs.readFile('public/data/subscribers.json', function (err, data) {
         if (err && err.code === 'ENOENT') {
-            let obj = [];
+            const obj = [];
             obj.push(user);
             fs.writeFileSync('public/data/subscribers.json', JSON.stringify(obj), error => console.error);
         } else if (err) {

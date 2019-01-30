@@ -1,4 +1,6 @@
 /* eslint-disable no-undef */
+'use strict';
+
 const $searchResultsSmall = $('#search-sm'),
       $searchResultsLarge = $('#search-md'),
       $searchFieldSmall   = $('#search-input-sm'),
@@ -89,9 +91,9 @@ setInterval( updateNews, 5000 );
 
 function updateNews() {
     $.getJSON('./data/news.json', function(data) {
-        let first = getRandom(5);
-        let second = first < data.length - 1 ? first + 1 : 0;
-        let arr = [ first, second ];
+        const first = getRandom(5);
+        const second = first < data.length - 1 ? first + 1 : 0;
+        const arr = [ first, second ];
         $.each( $blogNews, function( i, val ) {
             $( val ).html( "" ).append(
                 "<div class='bg-info text-white py-2 px-3 text-center'>" +
@@ -118,9 +120,9 @@ setInterval( updatePosts, 5000 );
 
 function updatePosts() {
     $.getJSON('./data/posts.json', function(data) {
-        let first = getRandom(5);
-        let second = first < data.length - 1 ? first + 1 : 0;
-        let arr = [ first, second ];
+        const first = getRandom(5);
+        const second = first < data.length - 1 ? first + 1 : 0;
+        const arr = [ first, second ];
         $.each( $twitterPosts, function( i, val ) {
             $( val ).html( "" ).append(
                 "<p class='mb-0'>" +
@@ -139,9 +141,9 @@ function updatePosts() {
 // open flicker images
 $flickers.on( "click", function( e ) {
     e.preventDefault();
-    let src = $( this ).children( "img" ).attr( "src" );
-    let alt = $( this ).children( "img" ).attr( "alt" );
-    let img = $( "#flicker" ).find( ".modal-body" ).children( "img" );
+    const src = $( this ).children( "img" ).attr( "src" );
+    const alt = $( this ).children( "img" ).attr( "alt" );
+    const img = $( "#flicker" ).find( ".modal-body" ).children( "img" );
     img.attr( "src", src ).attr( "alt", alt );
     $( "#flicker" ).modal( "show" );
 } );
@@ -177,7 +179,7 @@ function getRandom( max ) {
 }
 
 function getDays( date ) {
-    let today = Date.now();
+    const today = Date.now();
     return Math.round( ( today - Date.parse( date ) ) / ( 1000 * 60 * 60 * 24 ) );
 }
 
@@ -199,8 +201,8 @@ function setHover( $elem ) {
 function setSearchItems( $searchField, $searchResults, itemsClass = "" ) {
     $searchField.keyup( function() {
         $searchResults.html( "" ).show();
-        let searchVal = $searchField.val();
-        let expression = new RegExp(searchVal, 'i');
+        const searchVal = $searchField.val();
+        const expression = new RegExp(searchVal, 'i');
         $.getJSON('./data/data.json', function (data) {
             $.each(data, function (key, value) {
                 if (value.result.search(expression) !== -1) {
@@ -216,8 +218,8 @@ function setSearchItems( $searchField, $searchResults, itemsClass = "" ) {
 }
 
 function switchLayout() {
-    let cardClasses = [ "card-custom", "col-md", "mr-md-3" ];
-    let cardBodyClasses = [
+    const cardClasses = [ "card-custom", "col-md", "mr-md-3" ];
+    const cardBodyClasses = [
         "card-body-custom",
         "pl-3",
         "border-top",
@@ -226,7 +228,7 @@ function switchLayout() {
         "d-flex",
         "flex-column",
         "justify-content-center" ];
-    let spanClasses = [ "p-1", "rounded", "px-2", "position-absolute", "nowrap" ];
+    const spanClasses = [ "p-1", "rounded", "px-2", "position-absolute", "nowrap" ];
     $( "[id^='products']" ).children( "div:nth-child(n+2)" ).toggleClass( "flex-column" );
     $productCards.toggleClass( cardClasses );
     $productCards.children( "img" ).toggleClass( "card-img-top" );
