@@ -35,8 +35,9 @@ gulp.task('minifyScripts', function(done) {
   done();
 });
 
-gulp.task('sass:watch', function() {
-  gulp.watch('src/scss/**/*.scss', gulp.series('compileSass'));
+gulp.task('watch', function() {
+  gulp.watch('src/scss/**/*.scss', gulp.series('compileSass', 'minifySass'));
+  gulp.watch('src/js/**/*.js', gulp.series('minifyScripts'));
 });
 
 gulp.task('build', gulp.series('compileSass', 'minifySass', 'minifyScripts'));

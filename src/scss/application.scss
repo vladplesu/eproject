@@ -2,10 +2,10 @@
 
 @import 'utilities/index';
 @import 'base/base';
-@import 'components/index';
 
 // Bootstrap Imports
 
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
+@import 'components/index';
 @import 'layout/index';

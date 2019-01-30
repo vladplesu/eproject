@@ -10,14 +10,22 @@
   padding-right: 10px;
 }
 
+#banner {
+  @include media-breakpoint-down(sm) {
+    background: url(./img/banner/banner.jpg);
+    background-size: cover;
+  }
+}
+
 .carousel-inner {
+  height: 461px;
   @include media-breakpoint-up(md) {
     height: 551px;
   }
 }
 
 .carousel-item {
-  height: 461px;
+  height: 423px;
 }
 
 @for $i from 1 through length($carousel-bg-img) {
