@@ -8,7 +8,9 @@ const $searchResultsSmall = $('#search-sm'),
       $blogNews           = $('[id^="blog-news"]'),
       $twitterPosts       = $('[id^="post"]'),
       $flickers           = $('#flicker-widget').children('div').children('a'),
-      $socialMedia        = $('#social-media').children('a');
+      $socialMedia        = $('#social-media').children('a'),
+      $newsletterForm     = $('#newsletter').parent('div').parent('form'),
+      $loginForm          = $('#email').parent('div').parent('form');
 
 // Add hover effect for cart and wishlist buttons
 $('.navbar a').hover(
@@ -99,6 +101,31 @@ $flickers.on('click', function(e) {
     let img = $('#flicker').find('.modal-body').children('img');
     img.attr('src', src).attr('alt', alt);
     $('#flicker').modal('show');
+});
+
+// newsletter form validation
+$('.modal-footer').find('[type="submit"]').on('click', function(event){
+    if ($loginForm[0].checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    $loginForm.addClass('was-validated');
+});
+
+// newsletter form validation
+$('#newsletter').keyup(function() {
+    if ($newsletterForm[0].checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    $newsletterForm.addClass('was-validated');
+})
+$newsletterForm.find('[type="submit"]').on('click', function(event){
+    if ($newsletterForm[0].checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    $newsletterForm.addClass('was-validated');
 });
 
 // helper functions

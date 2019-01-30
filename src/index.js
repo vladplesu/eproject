@@ -38,7 +38,7 @@ router.post('/register', [body('useremail').isEmail().normalizeEmail(), sanitize
             }
         }
     });
-    res.send('success');
+    res.send('Your mail has been successfully added to our database');
 });
 
 app.use(router);
