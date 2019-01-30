@@ -7714,7 +7714,7 @@ a.text-nomad:hover, a.text-nomad:focus {
       border-right: 1px solid #eeeeee; } }
 
 .jumbotron {
-  background: url(../../../public/img/carousel/background.jpg) repeat-x;
+  background: url(./img/carousel/background.jpg) repeat-x;
   background-size: contain; }
 
 .container {
@@ -7730,17 +7730,17 @@ a.text-nomad:hover, a.text-nomad:focus {
 
 @media (max-width: 767.98px) {
   .carousel-inner > .container > div:nth-child(1) {
-    background: url(../../../public/img/carousel/pink_shoes.jpg);
+    background: url(./img/carousel/pink_shoes.jpg);
     background-size: cover; } }
 
 @media (max-width: 767.98px) {
   .carousel-inner > .container > div:nth-child(2) {
-    background: url(../../../public/img/carousel/anna_field_le.jpg);
+    background: url(./img/carousel/anna_field_le.jpg);
     background-size: cover; } }
 
 @media (max-width: 767.98px) {
   .carousel-inner > .container > div:nth-child(3) {
-    background: url(../../../public/img/carousel/prada_summer.jpg);
+    background: url(./img/carousel/prada_summer.jpg);
     background-size: cover; } }
 
 .carousel-indicators li {

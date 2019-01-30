@@ -55,7 +55,7 @@ updateNews();
 setInterval(updateNews, 5000);
 
 function updateNews() {
-    $.getJSON('../../public/news.json', function(data) {
+    $.getJSON('./data/news.json', function(data) {
         let first = getRandom(5);
         let second = first < data.length - 1 ? first + 1 : 0;
         let arr = [first, second];
@@ -78,7 +78,7 @@ updatePosts();
 setInterval(updatePosts, 5000);
 
 function updatePosts() {
-    $.getJSON('../../public/posts.json', function(data) {
+    $.getJSON('./data/posts.json', function(data) {
         let first = getRandom(5);
         let second = first < data.length - 1 ? first + 1 : 0;
         let arr = [first, second];
@@ -154,7 +154,7 @@ function setSearchItems($searchField, $searchResults, itemsClass = '') {
         $searchResults.html('').show();
         let searchVal = $searchField.val();
         let expression = new RegExp(searchVal, 'i');
-        $.getJSON('../../public/data.json', function (data) {
+        $.getJSON('./data/data.json', function (data) {
             $.each(data, function (key, value) {
                 if (value.result.search(expression) !== -1) {
                     $searchResults.append('<a href="#" class="list-group-item list-group-item-action border-0' + itemsClass + '">' + value.result + '</a>');
