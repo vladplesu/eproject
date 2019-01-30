@@ -1,3 +1,42 @@
+@font-face {
+  font-family: 'Aller Regular';
+  src: url("./fonts/Aller_Rg.eot");
+  src: url("./fonts/Aller_Rg.eot?#iefix") format("embedded-opentype"), url("./fonts/aller_rg-webfont.woff") format("woff"), url("./fonts/Aller_Rg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+.h7 {
+  font-size: 0.875rem !important; }
+
+.h8 {
+  font-size: 0.8125rem; }
+
+.h9 {
+  font-size: 0.75rem; }
+
+.h10 {
+  font-size: 0.6875rem; }
+
+.h11 {
+  font-size: 0.625rem; }
+
+#newsletter {
+  background: #2e2e2e;
+  border: none; }
+
+#price {
+  bottom: 0px;
+  left: 12px; }
+
+#on-sale,
+#out-of-stock {
+  top: 0px;
+  right: 12px; }
+
+#out-of-stock {
+  background: #f27e4b;
+  width: 68px; }
+
 /*!
  * Bootstrap v4.2.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -7663,68 +7702,6 @@ a.text-nomad:hover, a.text-nomad:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-@font-face {
-  font-family: 'Aller Regular';
-  src: url("./fonts/Aller_Rg.eot");
-  src: url("./fonts/Aller_Rg.eot?#iefix") format("embedded-opentype"), url("./fonts/aller_rg-webfont.woff") format("woff"), url("./fonts/Aller_Rg.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-.h7 {
-  font-size: 0.875rem !important; }
-
-.h8 {
-  font-size: 0.8125rem; }
-
-.h9 {
-  font-size: 0.75rem; }
-
-.h10 {
-  font-size: 0.6875rem; }
-
-.h11 {
-  font-size: 0.625rem; }
-
-.nowrap {
-  white-space: nowrap; }
-
-#newsletter {
-  background: #2e2e2e;
-  border: none; }
-
-.price {
-  bottom: 0px;
-  left: 12px; }
-
-.on-sale,
-.out-of-stock {
-  top: 0px;
-  right: 12px; }
-
-.out-of-stock {
-  background: #f27e4b;
-  width: 68px; }
-
-.card-custom img {
-  position: absolute;
-  width: 110px;
-  top: 5px;
-  left: 5px; }
-
-.card-body-custom {
-  margin-left: 120px;
-  border-left: 1px solid #6e6e6e;
-  padding-top: 0.75rem !important;
-  padding-bottom: 0.25rem !important;
-  height: 90px !important; }
-  @media (min-width: 768px) {
-    .card-body-custom {
-      height: initial !important; } }
-
-.card-body {
-  padding-left: 85px;
-  height: 65px; }
-
 #search-md {
   top: 44px;
   left: -1px;
@@ -7737,40 +7714,33 @@ a.text-nomad:hover, a.text-nomad:focus {
       border-right: 1px solid #eeeeee; } }
 
 .jumbotron {
-  background: url(./img/carousel/background.jpg) repeat-x;
+  background: url(../../../public/img/carousel/background.jpg) repeat-x;
   background-size: contain; }
 
 .container {
   padding-left: 10px;
   padding-right: 10px; }
 
-@media (max-width: 767.98px) {
-  #banner {
-    background: url(./img/banner/banner.jpg);
-    background-size: cover; } }
-
-.carousel-inner {
-  height: 461px; }
-  @media (min-width: 768px) {
-    .carousel-inner {
-      height: 551px; } }
+@media (min-width: 768px) {
+  .carousel-inner {
+    height: 551px; } }
 
 .carousel-item {
-  height: 423px; }
+  height: 461px; }
 
 @media (max-width: 767.98px) {
   .carousel-inner > .container > div:nth-child(1) {
-    background: url(./img/carousel/pink_shoes.jpg);
+    background: url(../../../public/img/carousel/pink_shoes.jpg);
     background-size: cover; } }
 
 @media (max-width: 767.98px) {
   .carousel-inner > .container > div:nth-child(2) {
-    background: url(./img/carousel/anna_field_le.jpg);
+    background: url(../../../public/img/carousel/anna_field_le.jpg);
     background-size: cover; } }
 
 @media (max-width: 767.98px) {
   .carousel-inner > .container > div:nth-child(3) {
-    background: url(./img/carousel/prada_summer.jpg);
+    background: url(../../../public/img/carousel/prada_summer.jpg);
     background-size: cover; } }
 
 .carousel-indicators li {

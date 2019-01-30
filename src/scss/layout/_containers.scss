@@ -1,7 +1,7 @@
 // Containers Styles
 
 .jumbotron {
-  background: url(../../../public/img/carousel/background.jpg) repeat-x;
+  background: url(./img/carousel/background.jpg) repeat-x;
   background-size: contain;
 }
 
@@ -12,7 +12,7 @@
 
 #banner {
   @include media-breakpoint-down(sm) {
-    background: url(../../../public/img/banner/banner.jpg);
+    background: url(./img/banner/banner.jpg);
     background-size: cover;
   }
 }
@@ -32,7 +32,7 @@
   $img-path: nth($carousel-bg-img, $i);
   .carousel-inner > .container > div:nth-child(#{$i}) {
     @include media-breakpoint-down(sm) {
-      background: url(../../../public/img/carousel/#{$img-path}.jpg);
+      background: url(./img/carousel/#{$img-path}.jpg);
       background-size: cover;
     }
   }

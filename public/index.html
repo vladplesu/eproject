@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../src/css/application.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -22,7 +22,7 @@
     <header class="bg-primary">
       <!-- top header begin-->
       <div class="navbar py-0 container align-items-stretch flex-nowrap">
-        <a href="/public" class="navbar-brand text-info text-uppercase py-1">Fooseshoes</a
+        <a href="/" class="navbar-brand text-info text-uppercase py-1">Fooseshoes</a
         >
         <form class="form-inline align-items-stretch">
           <div class="form-group border-left border-secondary position-relative d-none d-md-flex">
@@ -87,12 +87,12 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link py-3" href="#"
+                <a class="nav-link py-3" href="/"
                   >Home <span class="sr-only">(current)</span></a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link py-3" href="/public/products.html">Products</a>
+                <a class="nav-link py-3" href="/products.html">Products</a>
               </li>
               <li class="nav-item"><a class="nav-link py-3" href="#">About</a></li>
               <li class="nav-item"><a class="nav-link py-3" href="#">Pages</a></li>
@@ -548,15 +548,24 @@
         <div class="container">
           <div class="row pt-4 pb-2 pb-md-5 px-md-4">
             <div class="col-md mb-3">
-              <div class="input-group was-validated">
-                <input
-                id="newsletter"
-                type="email"
-                class="form-control text-white"
-                placeholder="Enter email for newsletter"
-                />
-                <button type="submit" class="btn btn-secondary text-primary font-weight-bold border-0 rounded-0">></button>
-              </div>
+              <form action="/register" method="post" class="form-group needs-validation" novalidate>
+                <div class="input-group">
+                  <input
+                  id="newsletter"
+                  type="email"
+                  name="useremail"
+                  class="form-control text-white"
+                  placeholder="Enter email for newsletter"
+                  aria-label="Enter email for newsletter"
+                  aria-describedby="btnGroupAddon"
+                  required
+                  />
+                  <button type="submit" class="btn btn-secondary text-primary font-weight-bold border-0 rounded-0">></button>
+                  <div class="invalid-feedback">
+                    Please enter a valid email.
+                  </div>
+                </div>
+              </form>
             </div>
             <div id="social-media" class="col-md text-md-right">
               <a href="#" class="btn text-secondary"><i class="fab fa-facebook-f"></i></a>
@@ -609,7 +618,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form class="was-validated" novalidate>
+            <form class="needs-validation" novalidate>
               <div class="form-group">
                 <label for="email">Email address</label>
                 <input
@@ -705,6 +714,6 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
-    <script src="../src/js/app.js"></script>
+    <script src="app.min.js"></script>
   </body>
 </html>

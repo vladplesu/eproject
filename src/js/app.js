@@ -1,15 +1,17 @@
 /* eslint-disable no-undef */
-const $searchResultsSmall = $( "#search-sm" ),
-      $searchResultsLarge = $( "#search-md" ),
-      $searchFieldSmall   = $( "#search-input-sm" ),
-      $searchFieldLarge   = $( "#search-input-md" ),
-      $carouselActions    = $( "[id^='carousel-actions']" ),
-      $productActions     = $( "[id^='product-actions']" ),
-      $productCards       = $( ".card" ),
-      $blogNews           = $( "[id^='blog-news']" ),
-      $twitterPosts       = $( "[id^='post']" ),
-      $flickers           = $( "#flicker-widget" ).children( "div" ).children( "a" ),
-      $socialMedia        = $( "#social-media" ).children( "a" ),
+const $searchResultsSmall = $('#search-sm'),
+      $searchResultsLarge = $('#search-md'),
+      $searchFieldSmall   = $('#search-input-sm'),
+      $searchFieldLarge   = $('#search-input-md'),
+      $carouselActions    = $('[id^="carousel-actions"]'),
+      $productActions     = $('[id^="product-actions"]'),
+      $productCards       = $('.card'),
+      $blogNews           = $('[id^="blog-news"]'),
+      $twitterPosts       = $('[id^="post"]'),
+      $flickers           = $('#flicker-widget').children('div').children('a'),
+      $socialMedia        = $('#social-media').children('a'),
+      $newsletterForm     = $('#newsletter').parent('div').parent('form'),
+      $loginForm          = $('#email').parent('div').parent('form'),
       $listSwitch         = $( "#list" ),
       $gridSwitch          = $( "#grid" );
 
@@ -86,8 +88,8 @@ updateNews();
 setInterval( updateNews, 5000 );
 
 function updateNews() {
-    $.getJSON( "../../public/news.json", function( data ) {
-        let first = getRandom( 5 );
+    $.getJSON('./data/news.json', function(data) {
+        let first = getRandom(5);
         let second = first < data.length - 1 ? first + 1 : 0;
         let arr = [ first, second ];
         $.each( $blogNews, function( i, val ) {
@@ -115,8 +117,8 @@ updatePosts();
 setInterval( updatePosts, 5000 );
 
 function updatePosts() {
-    $.getJSON( "../../public/posts.json", function( data ) {
-        let first = getRandom( 5 );
+    $.getJSON('./data/posts.json', function(data) {
+        let first = getRandom(5);
         let second = first < data.length - 1 ? first + 1 : 0;
         let arr = [ first, second ];
         $.each( $twitterPosts, function( i, val ) {
@@ -143,6 +145,31 @@ $flickers.on( "click", function( e ) {
     img.attr( "src", src ).attr( "alt", alt );
     $( "#flicker" ).modal( "show" );
 } );
+
+// newsletter form validation
+$('.modal-footer').find('[type="submit"]').on('click', function(event){
+    if ($loginForm[0].checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    $loginForm.addClass('was-validated');
+});
+
+// newsletter form validation
+$('#newsletter').keyup(function() {
+    if ($newsletterForm[0].checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    $newsletterForm.addClass('was-validated');
+})
+$newsletterForm.find('[type="submit"]').on('click', function(event){
+    if ($newsletterForm[0].checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    $newsletterForm.addClass('was-validated');
+});
 
 // helper functions
 function getRandom( max ) {
@@ -173,18 +200,15 @@ function setSearchItems( $searchField, $searchResults, itemsClass = "" ) {
     $searchField.keyup( function() {
         $searchResults.html( "" ).show();
         let searchVal = $searchField.val();
-        let expression = new RegExp( searchVal, "i" );
-        $.getJSON( "../../public/data.json", function( data ) {
-            $.each( data, function( key, value ) {
-                if ( value.result.search( expression ) !== -1 ) {
-                    $searchResults
-                        .append(
-                            "<a href='#' class='list-group-item border-0'" +
-                            itemsClass + ">" + value.result + "</a>" );
-                    $searchResults.find( "a" ).click( function( e ) {
-                        $searchField.val( e.target.textContent );
-                        $searchResults.slideUp( "slow" );
-                    } );
+        let expression = new RegExp(searchVal, 'i');
+        $.getJSON('./data/data.json', function (data) {
+            $.each(data, function (key, value) {
+                if (value.result.search(expression) !== -1) {
+                    $searchResults.append('<a href="#" class="list-group-item list-group-item-action border-0' + itemsClass + '">' + value.result + '</a>');
+                    $searchResults.find('a').click(function (e) {
+                        $searchField.val(e.target.textContent);
+                        $searchResults.slideUp('slow');
+                    });
                 }
             } );
         } );
